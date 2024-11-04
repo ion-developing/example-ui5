@@ -1,0 +1,43 @@
+<mvc:View
+	controllerName="test.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	core:require="{
+		formatter: 'test/model/formatter'
+	}"
+>
+	<Page
+		title="Prueba"
+		id="page"
+	>
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<!-- Campo para Nombre -->
+				<Label text="Nombre" />
+				<Input
+					id="nombre"
+					placeholder="Ingresa tu nombre"
+				/>
+				<!-- Campo para Apellido -->
+				<Label text="Apellido" />
+				<Input
+					id="apellido"
+					placeholder="Ingresa tu apellido"
+				/>
+				<!-- Botón para mostrar el nombre completo -->
+				<Button
+					text="Mostrar Nombre Completo"
+					press="onShowName"
+				/>
+				<!-- Botón para abrir un enlace -->
+				<Link
+					text="Open SAP Homepage"
+					target="_blank"
+					href="http://www.sap.com"
+				/>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>
